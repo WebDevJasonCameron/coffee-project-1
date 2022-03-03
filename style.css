@@ -10,6 +10,8 @@ hr {
     margin: 30px;
     display: flex;
     align-items: baseline;
+    /*background: lightcoral;*/
+    min-width: 40%;
 }
 
 .roast {
@@ -32,6 +34,9 @@ hr {
 #coffees-container {
     /*background: magenta;*/
     min-width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 
