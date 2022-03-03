@@ -1,12 +1,14 @@
 "use strict"
 
-// Sets each Obj as a div element string
-function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+// Creates string of each obj, with html tags
+function renderCoffee(coffee) {                                         //   'coffee' will be an object from the array
+    var html = '<div class="coffee">';                                 //   Creates var with the start of the div
+                                                                        // container with the 'coffee' class
+    html += '<div class="h1">' + coffee.name + '</div>';                //   Adding to the string with the coffee name
+                                                                        // attribute (with more div tags and h1
+                                                                        // bootstrap class)
+    html += '<div class="roast">' + coffee.roast + '</div>';
+    html += '</div>';
 
     return html;
 }
@@ -25,15 +27,19 @@ function renderCoffees(coffees) {
 // Filter Function
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    var selectedRoast = roastSelection.value;
-    var filteredCoffees = [];
-    coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
-            filteredCoffees.push(coffee);
+    var selectedRoast = roastSelection.value;                           //   Var that holds user input
+    var filteredCoffees = [];                                           //   New array var as our output
+
+    coffees.forEach(function(coffee) {                             //   Loop through original array
+        if (coffee.roast === selectedRoast) {                           //   Only selecting objects that user requests
+            filteredCoffees.push(coffee);                               //   Pushes those objects into our new output
+                                                                        // array
         }
     });
-    tbody.innerHTML = renderCoffees(filteredCoffees);
-}
+    coffeeContainer.innerHTML = renderCoffees(filteredCoffees);                   //   Running renderCoffees function with new
+}                                                                       // output array to get the string of HTML tags
+                                                                        // with object info.  Then it is placed into
+                                                                        // the 'coffeeContainer' element on the HTML page
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -54,13 +60,14 @@ var coffees = [
 ];
 
 // Setting Vars
-var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
-var roastSelection = document.querySelector('#roast-selection');
+var coffeeContainer = document.querySelector('#coffees-container');
+var submitButton = document.querySelector('#submit');           //   Submit: activate the functions with user
+                                                                         // info
+var roastSelection = document.querySelector('#roast-selection');//   Getting user roast input
 
 
 
-tbody.innerHTML = renderCoffees(coffees);
+coffeeContainer.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
