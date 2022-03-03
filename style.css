@@ -1,3 +1,4 @@
+
 header {
     text-align: center;
 }
@@ -18,7 +19,6 @@ hr {
 
 
 .form-container {
-    background: pink;
 }
 
 .main-container {
@@ -27,11 +27,9 @@ hr {
 
 .coffee-name {
     font-size: x-large;
-    background: greenyellow;
 }
 
 #coffees-container {
-    background: magenta;
     min-width: 50%;
 }
 
