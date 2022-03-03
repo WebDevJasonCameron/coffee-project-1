@@ -16,9 +16,16 @@ hr {
     margin: 16px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .form-container {
     background: pink;
+    display: flex;
+
 }
 
 .main-container {
@@ -34,5 +41,7 @@ hr {
     background: magenta;
     min-width: 50%;
 }
+
+
 
 
