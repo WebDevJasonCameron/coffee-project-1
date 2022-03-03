@@ -1,4 +1,3 @@
-
 header {
     text-align: center;
 }
@@ -17,33 +16,61 @@ hr {
     margin: 16px;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-}
 
-
-.form-container {
-<<<<<<< HEAD
-=======
-    background: pink;
-    display: flex;
-
->>>>>>> 595e5d8064ff90e9bfd56bf74dd4f60881ccafe7
-}
 
 .main-container {
     display: flex;
+    margin: 0 auto;
+    width: 100vw;
 }
 
 .coffee-name {
     font-size: x-large;
+    /*background: greenyellow;*/
 }
 
 #coffees-container {
+    /*background: magenta;*/
     min-width: 50%;
 }
 
 
+/* FORM COMPONENTS*/
+.form-container {
+    /*background: pink;*/
 
+}
 
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    min-width: 50%;
+}
+
+label {
+    font-weight: bold;
+    margin: .5rem 0;
+}
+
+select {
+    font-size: 1.2rem;
+    padding: .5rem;
+    margin-bottom: 1rem;
+}
+
+input {
+    font-size: 1.2rem;
+    padding: .5rem;
+    margin-bottom: 1rem;
+}
+
+/*input:focus {*/
+/*    box-shadow: 3px 0px 0px 0px  #1b77b9 ;*/
+/*}*/
+
+#submit {
+    background-color: #1b77b9;
+    color: #fff;
+    border-radius: 4px;
+}
