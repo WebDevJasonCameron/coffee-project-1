@@ -1,11 +1,11 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    // html += '<div>' + coffee.id + '</div>';
+    html += '<div class="h2">' + coffee.name + '</div>';
+    html += '<div  class="roast text-muted">' + coffee.roast + '</div>';
+    html += '</div>';
 
     return html;
 }
@@ -55,3 +55,5 @@ var roastSelection = document.querySelector('#roast-selection');
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+
+console.log(renderCoffees(coffees));
