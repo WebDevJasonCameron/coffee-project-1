@@ -17,8 +17,19 @@ hr {
     margin: 16px;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .form-container {
+<<<<<<< HEAD
+=======
+    background: pink;
+    display: flex;
+
+>>>>>>> 595e5d8064ff90e9bfd56bf74dd4f60881ccafe7
 }
 
 .main-container {
@@ -32,5 +43,7 @@ hr {
 #coffees-container {
     min-width: 50%;
 }
+
+
 
 
