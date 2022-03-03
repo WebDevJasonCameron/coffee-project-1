@@ -4,7 +4,7 @@
 function renderCoffee(coffee) {                                         //   'coffee' will be an object from the array
     var html = '<div class="coffee">';                                 //   Creates var with the start of the div
                                                                         // container with the 'coffee' class
-    html += '<div class="h1">' + coffee.name + '</div>';                //   Adding to the string with the coffee name
+    html += '<div class="coffee-name">' + coffee.name + '</div>';                //   Adding to the string with the coffee name
                                                                         // attribute (with more div tags and h1
                                                                         // bootstrap class)
     html += '<div class="roast">' + coffee.roast + '</div>';
