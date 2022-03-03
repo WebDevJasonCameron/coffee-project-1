@@ -1,3 +1,14 @@
+
+.coffee {
+    margin: 30px;
+    display: flex;
+    align-items: baseline;
+}
+
+.roast {
+    margin: 16px;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;

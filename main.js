@@ -1,11 +1,11 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    // html += '<div>' + coffee.id + '</div>';
+    html += '<div class="h2">' + coffee.name + '</div>';
+    html += '<div  class="roast text-muted">' + coffee.roast + '</div>';
+    html += '</div>';
 
     return html;
 }
@@ -58,5 +58,9 @@ tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 
+<<<<<<< HEAD
 
 console.log(renderCoffees(coffees));
+=======
+console.log(renderCoffees(coffees));
+>>>>>>> 9be98255a629ecca13a9ac86de2f41fbd74f21d7
