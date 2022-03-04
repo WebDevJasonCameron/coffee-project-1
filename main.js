@@ -1,13 +1,11 @@
 "use strict"
 
 // Creates string of each obj, with html tags
-function renderCoffee(coffee) {                                         //   'coffee' will be an object from the array
-    let html = '<div class="coffee">';                                 //   Creates let with the start of the div
-                                                                        // container with the 'coffee' class
-    html += '<div class="coffee-name">' + coffee.name + '</div>';                //   Adding to the string with the coffee name
-                                                                        // attribute (with more div tags and h1
-                                                                        // bootstrap class)
-    html += '<div class="roast">' + coffee.roast + '</div>';
+function renderCoffee(coffee) {
+    let html = '<div class="coffee">';
+
+    html += '<div class="h2 cName">' + coffee.name + '</div>';
+    html += '<div class="text-muted">' + coffee.roast + '</div>';
     html += '</div>';
 
     return html;
@@ -15,14 +13,13 @@ function renderCoffee(coffee) {                                         //   'co
 
 // Runs through the array and calls the renderCoffee function per obj
 function renderCoffees(coffees) {
-    let html = '';                                                      //   Creates a string let
-    for(let i = coffees.length - 1; i >= 0; i--) {                      //   Loop through Coffee array backwards
-                                                                        // until 'i' reach to 0
+    let html = '';
+    for (let i = 0; i < coffees.length; i++) {                          //   <-Fixed according to request
+
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
-
 
 // Roast Filter Function
 function updateCoffees(e) {
@@ -43,7 +40,6 @@ function updateCoffees(e) {
     }
 }
 
-
 // Name Search Filter Function
 function filterByName(){
 
@@ -61,7 +57,8 @@ function filterByName(){
 
 
 // Add a Coffee to array
-function addCoffeeToArray () {
+function addCoffeeToArray (e) {
+    e.preventDefault();
 
     let newCoffee = {
         id: coffees.length + 1,
@@ -70,7 +67,7 @@ function addCoffeeToArray () {
     }
     coffees.push(newCoffee)
 
-    renderCoffees(coffees);
+    coffeeContainer.innerHTML = renderCoffees(coffees);
 }
 
 
