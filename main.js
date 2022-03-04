@@ -41,24 +41,18 @@ function updateCoffees(e) {
             coffeeContainer.innerHTML = renderCoffees(filteredCoffees);
         });
     }
-       //   Running renderCoffees function with new
-}                                                                       // output array to get the string of HTML tags
-                                                                        // with object info.  Then it is placed into
-                                                                        // the 'coffeeContainer' element on the HTML page
-
+}
 
 
 // Name Search Filter Function
-function filterByName(e){
-    e.preventDefault();
+function filterByName(){
 
-    let selectedRoast = roastSelection.value;
+    let selectedName = coffeeName.value.toLowerCase();
     let filteredCoffees = [];
 
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.name.toLowerCase().includes(selectedName) === true) {
             filteredCoffees.push(coffee);
-
         }
     });
     coffeeContainer.innerHTML = renderCoffees(filteredCoffees);
@@ -66,9 +60,25 @@ function filterByName(e){
 }
 
 
+// Add a Coffee to array
+function addCoffeeToArray () {
 
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-let coffees = [
+    let newCoffee = {
+        id: coffees.length + 1,
+        name: addCoffeeName.value,
+        roast: addCoffeeRoast.value
+    }
+    coffees.push(newCoffee)
+
+    renderCoffees(coffees);
+}
+
+
+
+
+
+// ARRAY OF OBJ
+let coffees = [                                         // From http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
     {id: 3, name: 'Cinnamon', roast: 'light'},
@@ -85,19 +95,33 @@ let coffees = [
     {id: 14, name: 'French', roast: 'dark'},
 ];
 
-// Setting lets
-let coffeeContainer = document.querySelector('#coffees-container');
-let submitButton = document.querySelector('#submit');           //   Submit: activate the functions with user
-                                                                         // info
-let roastSelection = document.querySelector('#roast-selection');//   Getting user roast input
+// VARS
+let coffeeContainer = document.querySelector(                           //   Where we update the coffee data in HTML
+    '#coffees-container');
 
-let addCoffeeName = document.querySelector('#add-coffee-name')  //   Get user input for name
+let submitButton = document.querySelector(                              //   Submit: activate the functions with user
+    '#submit');                                                // info
+
+let roastSelection = document.querySelector(                            //   Getting user roast input
+    '#roast-selection');
+
+let coffeeName = document.getElementById('coffee-name');
+
+                                                                        //   BONUS
+let addCoffeeRoast = document.querySelector(                            //   Get user input for new roast
+    '#add-roast-selection')
+let addCoffeeName = document.querySelector('#add-coffee-name') //   Get user input for new name
+let addSubmit = document.querySelector('#add-submit')          //   Submit Btn for new coffee obj
 
 
-
-coffeeContainer.innerHTML = renderCoffees(coffees);
+// ACTIONS
+coffeeContainer.innerHTML = renderCoffees(coffees);                     //   THE Start in showing Output
 
 submitButton.addEventListener('click', updateCoffees);
 
+coffeeName.addEventListener('keyup', filterByName);                //   Updates when typing into the select name
 
-console.log(coffees.length);
+                                                                        //   BONUS
+addSubmit.addEventListener('click', addCoffeeToArray);             //   Implementing the function to add a new
+                                                                        // coffee obj to the array
+
