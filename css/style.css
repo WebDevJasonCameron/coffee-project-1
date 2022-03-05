@@ -1,8 +1,8 @@
 .coffee {
-    margin: 1rem 1rem 1rem 0;
+    margin: 1rem 1rem 1rem 1.5rem;
     display: flex;
     align-items: baseline;
-    min-width: 45%;
+    min-width: 40%;
 }
 
 .cName {

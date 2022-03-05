@@ -114,8 +114,6 @@ let addSubmit = document.querySelector('#add-submit')          //   Submit Btn f
 // ACTIONS
 coffeeContainer.innerHTML = renderCoffees(coffees);                     //   THE Start in showing Output
 
-// submitButton.addEventListener('click', updateCoffees);
-
 roastSelection.addEventListener('change', updateCoffees)
 
 
