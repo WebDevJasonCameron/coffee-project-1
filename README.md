@@ -1,12 +1,19 @@
 # Coffee Project Refactored
 
 Much was done in this team project.  Deon Rendell, Lorne Cousins, and I completed the initial goals for this project (including the bonus challenges) in less than twenty-four hours.  Afterwards, I decided to refactor our submitted work.  I tasked myself with several additional goals:
-    1. Ensure Mobile Screen Responsiveness (Completed)
-    2. Address visual accessibility issues 
-    3. Incorporate a warm coffee house style
-    4. Refactor HTML, CSS, and JS 
+1. Ensure Mobile Screen Responsiveness (Completed)
+2. Address visual accessibility issues 
+3. Incorporate a warm coffee house style
+4. Refactor HTML, CSS, and JS
 
-
+## Ideas for Refactor:
+1. Dark mode
+2. Animations (Roast's highlights)
+3. Clearer section delineation 
+4. Check Screen Reader 
+5. CSS Refactor (Organize)
+6. Console log Information about project
+7. Review and clean JS code
 
 
 
