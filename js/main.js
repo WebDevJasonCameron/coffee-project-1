@@ -1,16 +1,44 @@
 "use strict"
 
 // Creates string of each obj, with html tags
+// function renderCoffee(coffee) {
+//     let html = '<div class="coffee">';
+//
+//     html += '<div class="h2 cName">' + coffee.name + '</div>';
+//     html += '<div class="text-muted">' + coffee.roast + '</div>';
+//     html += '</div>';
+//
+//     return html;
+// }
 function renderCoffee(coffee) {
-    let html = '<div class="coffee">';
-
-    html += '<div class="h2 cName">' + coffee.name + '</div>';
-    html += '<div class="text-muted">' + coffee.roast + '</div>';
-    html += '</div>';
+    let html = ''
+    html += '             <div class="card text-center w-25 m-4">' +
+        '                    <div class="card-header bg-dark text-white">' +
+        '                        <h3>' + coffee.name + '</h3>' +
+        '                    </div>' +
+        '                    <div class="card-body">' +
+        '                        <h4 class="card-title">$' + coffee.price + '</h4>' +
+        '                        <p class="card-text">' + coffee.description + '</p>' +
+        '                        <ul class="list-group">' +
+        '                            <li class="list-group-item">' +
+                                        coffee.flavor1 +
+        '                            </li>' +
+        '                            <li class="list-group-item">' +
+                                        coffee.flavor2 +
+        '                            </li>' +
+        '                            <li class="list-group-item">' +
+                                        coffee.flavor3 +
+        '                            </li>' +
+        '                        </ul>' +
+        '                    </div>' +
+        '                    <div class="card-footer text-muted">' +
+                                coffee.roast +
+        '                    </div>' +
+        '                </div>' +
+        '            </div>'
 
     return html;
 }
-
 // Runs through the array and calls the renderCoffee function per obj
 function renderCoffees(coffees) {
     let html = '';
@@ -76,20 +104,20 @@ function addCoffeeToArray (e) {
 
 // ARRAY OF OBJ
 let coffees = [                                         // From http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {id: 1, name: 'Light City', roast: 'light', price: '4.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'hazelnut', flavor2: 'mocha', flavor3: 'strawberry'},
+    {id: 2, name: 'Half City', roast: 'light', price: '6.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'chocolate', flavor2: 'blueberry', flavor3: 'mocha'},
+    {id: 3, name: 'Cinnamon', roast: 'light', price: '4.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Cinnamon', flavor2: 'vanilla', flavor3: 'mocha'},
+    {id: 4, name: 'City', roast: 'medium', price: '7.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'vanilla', flavor2: 'blueberry', flavor3: 'strawberry'},
+    {id: 5, name: 'American', roast: 'medium', price: '2.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'chocolate', flavor2: 'apple', flavor3: 'banana'},
+    {id: 6, name: 'Breakfast', roast: 'medium', price: '3.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'bacon', flavor2: 'maple', flavor3: 'strawberry'},
+    {id: 7, name: 'High', roast: 'dark', price: '4.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'pumpkin', flavor2: 'banana', flavor3: 'strawberry'},
+    {id: 8, name: 'Continental', roast: 'dark', price: '5.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'mocha', flavor2: 'peppermint', flavor3: 'caramel'},
+    {id: 9, name: 'New Orleans', roast: 'dark', price: '3.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'hazelnut', flavor2: 'peppermint', flavor3: 'mocha'},
+    {id: 10, name: 'European', roast: 'dark', price: '1.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'vanilla', flavor2: 'raspberry', flavor3: 'hazelnut'},
+    {id: 11, name: 'Espresso', roast: 'dark', price: '9.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'smoke', flavor2: 'bitter', flavor3: 'wood'},
+    {id: 12, name: 'Viennese', roast: 'dark', price: '7.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'sweet', flavor2: 'caramel', flavor3: 'hazelnut'},
+    {id: 13, name: 'Italian', roast: 'dark', price: '13.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'strawberry', flavor2: 'banana', flavor3: 'strawberry'},
+    {id: 14, name: 'French', roast: 'dark', price: '8.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'chocolate', flavor2: 'banana', flavor3: 'caramel'},
 ];
 
 // VARS

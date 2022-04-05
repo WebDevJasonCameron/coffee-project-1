@@ -62,7 +62,8 @@ body {
 /*ABOUT PAGE*/
 #page-header {
     height: 200px;
-    background: url("../img/image1.jpg") fixed 0 -360px;
+    background: rgba(0, 0, 0, 0.29) url("../img/coffee_00.jpg") fixed 0 -360px;
+    background-blend-mode: multiply;
     color: #ffffff;
     border-bottom: 1px #eeeeee solid;
     padding-top: 50px;

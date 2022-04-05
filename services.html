@@ -5,7 +5,7 @@
     <!--Viewport-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Gozzom | Services</title>
+    <title>Coffee Life | Our Roasts</title>
 
     <!--Favicon-->
     <link rel="shortcut icon" href="img/MoonConceptSmallPatch03.svg" type="image/x-icon">
@@ -21,7 +21,10 @@
     <!--NAV-->
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container">
-        <a href="index.html" class="navbar-brand">Glozzom</a>
+        <a href="index.html" class="navbar-brand">
+            <img src="img/MoonConceptSmallPatch03.svg" alt="Coffee Life Mascot, Moon the Raccoon" width="55px" class="pr-3">
+            Coffee Life
+        </a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,7 +37,7 @@
                     <a href="about.html" class="nav-link">About Us</a>
                 </li>
                 <li class="nav-item active">
-                    <a href="services.html" class="nav-link">Services</a>
+                    <a href="services.html" class="nav-link">Our Roasts</a>
                 </li>
                 <li class="nav-item">
                     <a href="blog.html" class="nav-link">blog</a>
@@ -49,230 +52,66 @@
 
     <!--HEADER-->
     <header id="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 m-auto text-center">
+                    <h1>Our Roasts</h1>
+                    <p>We have a wide variety of roasts, both imported, local, and home cooked...</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--COFFEE-->
     <div class="container">
         <div class="row">
-            <div class="col-md-6 m-auto text-center">
-                <h1>Our Services</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur..</p>
+            <div class="col-12 col-md-3">
+                <div class="container form-container">
+                    <form>
+                        <div class="form-group">
+
+                            <h2 class="my-4">Select Coffee</h2>
+
+                            <label for="roast-selection">Roast</label>
+                            <select class="form-control my-2" id="roast-selection">
+                                <option>all</option>
+                                <option>light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                            </select>
+
+                            <label for="coffee-name">Coffee Name</label>
+                            <input class="form-control my-2" type="text" name="coffee-name" id="coffee-name">
+
+                        </div>
+
+                        <hr>
+
+                        <h2 class="my-4">Add a Coffee</h2>
+
+                        <div class="form-group">
+                            <label for="add-roast-selection">Roast</label>
+                            <select class="form-control my-2" id="add-roast-selection">
+                                <option>light</option>
+                                <option>medium</option>
+                                <option>dark</option>
+                            </select>
+
+                            <label for="add-coffee-name">Name</label>
+                            <input class="form-control my-2" type="text" name="add-coffee-name" id="add-coffee-name">
+
+                            <input class="btn btn-primary w-100 my-2" id="add-submit" type="submit" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-9 order-md-first mx-auto">
+                <div class="d-flex flex-wrap" id="coffees-container"></div>
             </div>
         </div>
+
     </div>
-</header>
-
-    <!--SERVICES-->
-    <section id="services" class="py-5">
-        <div class="container">
-            <div class="row">
-            <!--Card One-->
-                <div class="col-md-4">
-                    <div class="card text-center">
-                        <div class="card-header bg-dark text-white">
-                            <h3>Service Plan One</h3>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">$59.94</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.</p>
-                            <ul class="list-group">
-                                <li class="list-group-item">
-                                    <i class="fas fa-check"></i> Feature One
-                                </li>
-                                <li class="list-group-item">
-                                    <i class="fas fa-check"></i> Feature Two
-                                </li>
-                                <li class="list-group-item">
-                                    <i class="fas fa-check"></i> Feature Three
-                                </li>
-                                <li class="list-group-item">
-                                    <i class="fas fa-check"></i> Feature Four
-                                </li>
-                                <li class="list-group-item">
-                                    <i class="fas fa-check"></i> Feature Five
-                                </li>
-                            </ul>
-                            <a href="#" class="btn btn-danger btn-block mt-2">Get It</a>
-                        </div>
-                        <div class="card-footer text-muted">
-                            1 Year Plan
-                        </div>
-                    </div>
-                </div>
-                <!--Card Two-->
-                <div class="col-md-4">
-                    <div class="card text-center">
-                        <div class="card-header bg-dark text-white">
-                            <h3>Service Plan Two</h3>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">$99.94</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.</p>
-                            <ul class="list-group">
-                                <li class="list-group-item">
-                                    <i class="fas fa-check"></i> Feature One
-                                </li>
-                                <li class="list-group-item">
-                                    <i class="fas fa-check"></i> Feature Two
-                                </li>
-                                <li class="list-group-item">
-                                    <i class="fas fa-check"></i> Feature Three
-                                </li>
-                                <li class="list-group-item">
-                                    <i class="fas fa-check"></i> Feature Four
-                                </li>
-                                <li class="list-group-item">
-                                    <i class="fas fa-check"></i> Feature Five
-                                </li>
-                            </ul>
-                            <a href="#" class="btn btn-danger btn-block mt-2">Get It</a>
-                        </div>
-                        <div class="card-footer text-muted">
-                            1 Year Plan
-                        </div>
-                    </div>
-                </div>
-                <!--Card Three-->
-                <div class="col-md-4">
-                    <div class="card text-center">
-                        <div class="card-header bg-dark text-white">
-                            <h3>Service Plan Three</h3>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">$129.94</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.</p>
-                            <ul class="list-group">
-                                <li class="list-group-item">
-                                    <i class="fas fa-check"></i> Feature One
-                                </li>
-                                <li class="list-group-item">
-                                    <i class="fas fa-check"></i> Feature Two
-                                </li>
-                                <li class="list-group-item">
-                                    <i class="fas fa-check"></i> Feature Three
-                                </li>
-                                <li class="list-group-item">
-                                    <i class="fas fa-check"></i> Feature Four
-                                </li>
-                                <li class="list-group-item">
-                                    <i class="fas fa-check"></i> Feature Five
-                                </li>
-                            </ul>
-                            <a href="#" class="btn btn-danger btn-block mt-2">Get It</a>
-                        </div>
-                        <div class="card-footer text-muted">
-                             Year Plan
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!--FAQ-->
-    <section id="faq" class="p-5 bg-dark text-white">
-        <div class="container">
-            <h1 class="text-center">Frequently Asked Questions</h1>
-            <hr>
-            <div class="row">
-                <div class="col-md-6">
-                    <!--Accordion One-->
-                    <div class="accordion" id="accordionOne">
-                        <!-- Card One -->
-                        <div class="card accordion-item">
-                            <h5 class="card-header accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"  >
-                                        Question One
-                                    </button>
-                            </h5>
-                            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionOne">
-                                    <div class="accordion-body">
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque dignissimos error esse fugiat ipsam minima mollitia neque nobis officia quaerat, quam repellendus sit soluta voluptas! At consectetur fuga soluta.
-                                    </div>
-                            </div>
-                        </div>
-                        <!-- Card One -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="mb-0">
-                                    <a href="#collapseTwo" data-toggle="collapse" data-parent="accordion">
-                                        Question Two
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="collapseTwo" class="collapse">
-                                <div class="card-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque dignissimos error esse fugiat ipsam minima mollitia neque nobis officia quaerat, quam repellendus sit soluta voluptas! At consectetur fuga soluta.
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card Three -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="mb-0">
-                                    <a href="#collapseThree" data-toggle="collapse" data-parent="accordion">
-                                        Question Three
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="collapseThree" class="collapse">
-                                <div class="card-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque dignissimos error esse fugiat ipsam minima mollitia neque nobis officia quaerat, quam repellendus sit soluta voluptas! At consectetur fuga soluta.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                <!--Accordion Two-->
-                    <div id="accordionTwo">
-                        <!-- Card Four -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="mb-0">
-                                    <a href="#collapseFour" data-toggle="collapse" data-parent="accordion">
-                                        Question FOur
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="collapseFour" class="collapse">
-                                <div class="card-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque dignissimos error esse fugiat ipsam minima mollitia neque nobis officia quaerat, quam repellendus sit soluta voluptas! At consectetur fuga soluta.
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card Five -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="mb-0">
-                                    <a href="#collapseFive" data-toggle="collapse" data-parent="accordion">
-                                        Question Five
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="collapseFive" class="collapse">
-                                <div class="card-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque dignissimos error esse fugiat ipsam minima mollitia neque nobis officia quaerat, quam repellendus sit soluta voluptas! At consectetur fuga soluta.
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card Six -->
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="mb-0">
-                                    <a href="#collapseSix" data-toggle="collapse" data-parent="accordion">
-                                        Question Six
-                                    </a>
-                                </h5>
-                            </div>
-                            <div id="collapseSix" class="collapse">
-                                <div class="card-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus atque dignissimos error esse fugiat ipsam minima mollitia neque nobis officia quaerat, quam repellendus sit soluta voluptas! At consectetur fuga soluta.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!--FOOTER-->
     <footer id="main-footer" class="text-center p-4">
@@ -307,3 +146,5 @@
 </section>
 </body>
 </html>
+
+
