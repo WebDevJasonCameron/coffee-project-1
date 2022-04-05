@@ -123,4 +123,3 @@ coffeeName.addEventListener('keyup', filterByName);                //   Updates 
 addSubmit.addEventListener('click', addCoffeeToArray);             //   Implementing the function to add a new
 
 
-
