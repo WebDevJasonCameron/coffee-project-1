@@ -20,14 +20,14 @@ function renderCoffee(coffee) {
         '                        <h4 class="card-title">$' + coffee.price + '</h4>' +
         '                        <p class="card-text">' + coffee.description + '</p>' +
         '                        <ul class="list-group">' +
-        '                            <li class="list-group-item">' +
-                                        coffee.flavor1 +
+        '                            <li class="list-group-item border-0 text-left">' +
+        '                               <i class="fa-brands fa-gratipay"></i> ' + coffee.flavor1 +
         '                            </li>' +
-        '                            <li class="list-group-item">' +
-                                        coffee.flavor2 +
+        '                            <li class="list-group-item border-0 text-left">' +
+        '                               <i class="fa-brands fa-gratipay"></i> ' + coffee.flavor2 +
         '                            </li>' +
-        '                            <li class="list-group-item">' +
-                                        coffee.flavor3 +
+        '                            <li class="list-group-item border-0 text-left">' +
+        '                               <i class="fa-brands fa-gratipay"></i> ' + coffee.flavor3 +
         '                            </li>' +
         '                        </ul>' +
         '                    </div>' +
@@ -104,7 +104,7 @@ function addCoffeeToArray (e) {
 
 // ARRAY OF OBJ
 let coffees = [                                         // From http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-    {id: 1, name: 'Light City', roast: 'light', price: '4.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'hazelnut', flavor2: 'mocha', flavor3: 'strawberry'},
+    {id: 1, name: 'Light City', roast: 'light', price: '4.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Hazelnut', flavor2: 'Mocha', flavor3: 'Strawberry'},
     {id: 2, name: 'Half City', roast: 'light', price: '6.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'chocolate', flavor2: 'blueberry', flavor3: 'mocha'},
     {id: 3, name: 'Cinnamon', roast: 'light', price: '4.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Cinnamon', flavor2: 'vanilla', flavor3: 'mocha'},
     {id: 4, name: 'City', roast: 'medium', price: '7.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'vanilla', flavor2: 'blueberry', flavor3: 'strawberry'},

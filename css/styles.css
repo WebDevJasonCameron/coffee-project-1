@@ -19,22 +19,25 @@ body {
 }
 
 .carousel-image-1 {
-    background: url("../img/image1.jpg");
+    background: rgba(0, 0, 0, 0.29) url("../img/coffee_04.jpg") center;
+    background-blend-mode: multiply;
     background-size: cover;
 }
 .carousel-image-2 {
-    background: url("../img/image2.jpg");
+    background: rgba(0, 0, 0, 0.29) url("../img/coffee_06.jpg") center;
+    background-blend-mode: multiply;
     background-size: cover;
 }
 .carousel-image-3 {
-    background: url("../img/image3.jpg");
+    background: rgba(0, 0, 0, 0.29) url("../img/coffee_02.jpg") center;
+    background-blend-mode: multiply;
     background-size: cover;
 }
 
 #home-heading {
     position: relative;
     min-height: 200px;
-    background: url("../img/lights.jpg") no-repeat fixed;
+    background: url("../img/coffee_09.jpg") no-repeat fixed;
     text-align: center;
     color: white;
 }
@@ -50,7 +53,7 @@ body {
 #video-play {
     position: relative;
     min-height: 200px;
-    background: url("../img/media.jpg") no-repeat fixed 0 -300px;
+    background: url("../img/coffee_10.jpg") no-repeat fixed 0 -300px;
     text-align: center;
     color: white;
 }
