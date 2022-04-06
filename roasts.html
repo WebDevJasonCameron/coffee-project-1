@@ -19,7 +19,7 @@
 </head>
 <body>
     <!--NAV-->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark main-bg-color">
     <div class="container">
         <a href="index.html" class="navbar-brand">
             <img src="img/MoonConceptSmallPatch03.svg" alt="Coffee Life Mascot, Moon the Raccoon" width="55px" class="pr-3">
@@ -70,35 +70,158 @@
                     <form>
                         <div class="form-group">
 
-                            <h2 class="my-4">Select Coffee</h2>
+                            <h2 class="my-4">Select Roast</h2>
 
-                            <label for="roast-selection">Roast</label>
-                            <select class="form-control my-2" id="roast-selection">
+                            <label for="coffee-name">Coffee Name</label>
+                            <input class="form-control " type="text" name="coffee-name" id="coffee-name">
+
+                            <label for="roast-flavor1" class="mt-2">Main Flavor</label>
+                            <select class="form-control" id="roast-flavor1">
+                                <option></option>
+                                <option>Amaretto</option>
+                                <option>Apple</option>
+                                <option>Bacon</option>
+                                <option>Banana</option>
+                                <option>Bitter</option>
+                                <option>Birthday Cake</option>
+                                <option>Blueberry</option>
+                                <option>Butterscotch</option>
+                                <option>Caramel</option>
+                                <option>Chocolate</option>
+                                <option>Cinnamon</option>
+                                <option>French Vanilla</option>
+                                <option>Hazelnut</option>
+                                <option>Highlander Grogg</option>
+                                <option>Kona</option>
+                                <option>Maple</option>
+                                <option>Mocha</option>
+                                <option>Peppermint</option>
+                                <option>Pumpkin Spice</option>
+                                <option>Raspberry</option>
+                                <option>Smoke</option>
+                                <option>Strawberry</option>
+                                <option>Wood</option>
+                                <option>Vanilla</option>
+                            </select>
+
+                            <label for="roast-selection" class="mt-1">Roast</label>
+                            <select class="form-control " id="roast-selection">
                                 <option>all</option>
                                 <option>light</option>
                                 <option>medium</option>
                                 <option>dark</option>
                             </select>
 
-                            <label for="coffee-name">Coffee Name</label>
-                            <input class="form-control my-2" type="text" name="coffee-name" id="coffee-name">
 
                         </div>
 
                         <hr>
 
-                        <h2 class="my-4">Add a Coffee</h2>
+                        <h2 class="my-4">Suggest New Roast</h2>
 
                         <div class="form-group">
-                            <label for="add-roast-selection">Roast</label>
-                            <select class="form-control my-2" id="add-roast-selection">
+                            <label for="add-coffee-name">Name</label>
+                            <input class="form-control" type="text" name="add-coffee-name" id="add-coffee-name">
+
+                            <label for="add-coffee-description">Description</label>
+                            <textarea name="add-coffee-description" id="add-coffee-description" cols="30" rows="4"
+                                      class="form-control"></textarea>
+
+                            <label for="add-roast-flavor1" class="mt-2">Main Flavor</label>
+                            <select class="form-control" id="add-roast-flavor1">
+                                <option></option>
+                                <option>Amaretto</option>
+                                <option>Apple</option>
+                                <option>Bacon</option>
+                                <option>Banana</option>
+                                <option>Bitter</option>
+                                <option>Birthday Cake</option>
+                                <option>Blueberry</option>
+                                <option>Butterscotch</option>
+                                <option>Caramel</option>
+                                <option>Chocolate</option>
+                                <option>Cinnamon</option>
+                                <option>French Vanilla</option>
+                                <option>Hazelnut</option>
+                                <option>Highlander Grogg</option>
+                                <option>Kona</option>
+                                <option>Maple</option>
+                                <option>Mocha</option>
+                                <option>Peppermint</option>
+                                <option>Pumpkin Spice</option>
+                                <option>Raspberry</option>
+                                <option>Smoke</option>
+                                <option>Strawberry</option>
+                                <option>Wood</option>
+                                <option>Vanilla</option>
+                            </select>
+
+                            <label for="add-roast-flavor2" class="mt-2">Secondary Flavor</label>
+                            <select class="form-control" id="add-roast-flavor2">
+                                <option></option>
+                                <option>Amaretto</option>
+                                <option>Apple</option>
+                                <option>Bacon</option>
+                                <option>Banana</option>
+                                <option>Bitter</option>
+                                <option>Birthday Cake</option>
+                                <option>Blueberry</option>
+                                <option>Butterscotch</option>
+                                <option>Caramel</option>
+                                <option>Chocolate</option>
+                                <option>Cinnamon</option>
+                                <option>French Vanilla</option>
+                                <option>Hazelnut</option>
+                                <option>Highlander Grogg</option>
+                                <option>Kona</option>
+                                <option>Maple</option>
+                                <option>Mocha</option>
+                                <option>Peppermint</option>
+                                <option>Pumpkin Spice</option>
+                                <option>Raspberry</option>
+                                <option>Smoke</option>
+                                <option>Strawberry</option>
+                                <option>Wood</option>
+                                <option>Vanilla</option>
+                            </select>
+
+                            <label for="add-roast-flavor3" class="mt-2">Tertiary Flavor</label>
+                            <select class="form-control" id="add-roast-flavor3">
+                                <option></option>
+                                <option>Amaretto</option>
+                                <option>Apple</option>
+                                <option>Bacon</option>
+                                <option>Banana</option>
+                                <option>Bitter</option>
+                                <option>Birthday Cake</option>
+                                <option>Blueberry</option>
+                                <option>Butterscotch</option>
+                                <option>Caramel</option>
+                                <option>Chocolate</option>
+                                <option>Cinnamon</option>
+                                <option>French Vanilla</option>
+                                <option>Hazelnut</option>
+                                <option>Highlander Grogg</option>
+                                <option>Kona</option>
+                                <option>Maple</option>
+                                <option>Mocha</option>
+                                <option>Peppermint</option>
+                                <option>Pumpkin Spice</option>
+                                <option>Raspberry</option>
+                                <option>Smoke</option>
+                                <option>Strawberry</option>
+                                <option>Wood</option>
+                                <option>Vanilla</option>
+                            </select>
+
+                            <label for="add-roast-selection" class="mt-2">Roast</label>
+                            <select class="form-control" id="add-roast-selection">
                                 <option>light</option>
                                 <option>medium</option>
                                 <option>dark</option>
                             </select>
 
-                            <label for="add-coffee-name">Name</label>
-                            <input class="form-control my-2" type="text" name="add-coffee-name" id="add-coffee-name">
+
 
                             <input class="btn btn-primary w-100 my-2" id="add-submit" type="submit" />
                         </div>
@@ -114,7 +237,7 @@
     </div>
 
     <!--FOOTER-->
-    <footer id="main-footer" class="text-center p-4">
+    <footer id="main-footer" class="text-center p-4 main-bg-color">
         <div class="container">
             <div class="row">
                 <div class="col">

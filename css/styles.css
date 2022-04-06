@@ -1,23 +1,37 @@
+/*VARS*/
+:root {
+    --main-color: #2d2929;
+    --second-color: #692727;
+}
+
+/*MAIN COMPONENTS*/
+.main-bg-color {
+    background-color: var(--main-color);
+}
+.second-bg-color {
+    background-color: var(--second-color);
+}
+
+/*MAIN*/
 body {
     overflow-x: hidden;
 }
 
-
+/*NAV*/
 .navbar .nav-link {
     font-size: 14px;
     text-transform: uppercase;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
 }
-
 .navbar .nav-item.active {
     border-left: #444 4px solid;
 }
 
+/*HOME PAGE*/
 .carousel-item {
     height: 450px;
 }
-
 .carousel-image-1 {
     background: rgba(0, 0, 0, 0.29) url("../img/coffee_04.jpg") center;
     background-blend-mode: multiply;
@@ -57,7 +71,6 @@ body {
     text-align: center;
     color: white;
 }
-
 #video-play a {
     color: #ffffff;
 }
@@ -75,22 +88,7 @@ body {
     margin-top: -50px;
 }
 
-/*FAQ*/
-#faq .card {
-    border: #444444;
-}
-
-#faq a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-#faq .card-body,
-#faq .card-header {
-    background: #333333;
-}
-
-/*BLOG FOOTER*/
+/*FOOTER: ALL PAGES*/
 #main-footer {
     background-color: #000000;
     color: #ffffff;

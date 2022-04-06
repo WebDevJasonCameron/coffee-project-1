@@ -13,7 +13,7 @@
 function renderCoffee(coffee) {
     let html = ''
     html += '             <div class="card text-center w-25 m-4">' +
-        '                    <div class="card-header bg-dark text-white">' +
+        '                    <div class="card-header main-bg-color text-white">' +
         '                        <h3>' + coffee.name + '</h3>' +
         '                    </div>' +
         '                    <div class="card-body">' +
