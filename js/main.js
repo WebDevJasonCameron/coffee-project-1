@@ -1,18 +1,9 @@
 "use strict"
 
 // Creates string of each obj, with html tags
-// function renderCoffee(coffee) {
-//     let html = '<div class="coffee">';
-//
-//     html += '<div class="h2 cName">' + coffee.name + '</div>';
-//     html += '<div class="text-muted">' + coffee.roast + '</div>';
-//     html += '</div>';
-//
-//     return html;
-// }
 function renderCoffee(coffee) {
     let html = ''
-    html += '             <div class="card text-center w-25 m-4">' +
+    html += '             <div class="card text-center col-11 col-md-3 p-0 m-4">' +
         '                    <div class="card-header main-bg-color text-white">' +
         '                        <h3>' + coffee.name + '</h3>' +
         '                    </div>' +
@@ -68,7 +59,7 @@ function updateCoffees(e) {
     }
 }
 
-// Filter Roast Function
+// Filter Flavor Function
 function filterByFlavor(e) {
     e.preventDefault();
 
