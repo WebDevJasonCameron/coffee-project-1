@@ -22,7 +22,7 @@ function renderCoffee(coffee) {
         '                            </li>' +
         '                        </ul>' +
         '                    </div>' +
-        '                    <div class="card-footer text-muted">' +
+        '                    <div class="footer-by-roast card-footer text-muted">' +
                                 coffee.roast +
         '                    </div>' +
         '                </div>' +
@@ -93,7 +93,6 @@ function filterByName(){
 
 }
 
-
 // Add a Coffee to array
 function addCoffeeToArray (e) {
     e.preventDefault();
@@ -112,8 +111,6 @@ function addCoffeeToArray (e) {
 
     coffeeContainer.innerHTML = renderCoffees(coffees);
 }
-
-
 
 
 
@@ -162,8 +159,9 @@ let addCoffeeFlavor2 = document.querySelector(
     '#add-roast-flavor2');
 let addCoffeeFlavor3 = document.querySelector(
     '#add-roast-flavor3');
-let addSubmit = document.querySelector('#add-submit')          //   Submit Btn for new coffee obj
+let addSubmit = document.querySelector('#add-submit');          //   Submit Btn for new coffee obj
 
+let footerByRoast = document.querySelector('.footer-by-roast');
 
 // ACTIONS
 coffeeContainer.innerHTML = renderCoffees(coffees);                     //   THE Start in showing Output
@@ -176,5 +174,4 @@ coffeeName.addEventListener('keyup', filterByName);                //   Updates 
 
                                                                         //   BONUS
 addSubmit.addEventListener('click', addCoffeeToArray);             //   Implementing the function to add a new
-
 

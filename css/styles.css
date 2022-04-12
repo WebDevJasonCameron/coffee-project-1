@@ -2,6 +2,11 @@
 :root {
     --main-color: #2d2929;
     --second-color: #692727;
+    --third-color: #ffbebe;
+    --fourth-color: #60b160;
+    --roast-dark-color: rgba(45, 41, 41, 0.49);
+    --roast-med-color: rgba(130, 117, 117, 0.49);
+    --roast-light-color: rgba(0,0,0,.03);
 }
 
 /*MAIN COMPONENTS*/
@@ -11,10 +16,24 @@
 .second-bg-color {
     background-color: var(--second-color);
 }
+.fourth-btn-color {
+    background-color: var(--fourth-color);
+    color: #ffffff;
+    font-weight: bold;
+    /*letter-spacing: 0.5em;*/
+}
 
 /*MAIN*/
 body {
     overflow-x: hidden;
+}
+
+a {
+    color: var(--second-color);
+}
+a:hover {
+    color: var(--second-color);
+    text-decoration: none;
 }
 
 /*NAV*/
@@ -33,17 +52,17 @@ body {
     height: 450px;
 }
 .carousel-image-1 {
-    background: rgba(0, 0, 0, 0.29) url("../img/coffee_04.jpg") center;
+    background: rgba(0, 0, 0, 0.30) url("../img/coffee_04.jpg") center;
     background-blend-mode: multiply;
     background-size: cover;
 }
 .carousel-image-2 {
-    background: rgba(0, 0, 0, 0.29) url("../img/coffee_06.jpg") center;
+    background: rgba(0, 0, 0, 0.30) url("../img/coffee_06.jpg") center;
     background-blend-mode: multiply;
     background-size: cover;
 }
 .carousel-image-3 {
-    background: rgba(0, 0, 0, 0.29) url("../img/coffee_02.jpg") center;
+    background: rgba(0, 0, 0, 0.30) url("../img/coffee_02.jpg") center;
     background-blend-mode: multiply;
     background-size: cover;
 }
@@ -54,6 +73,10 @@ body {
     background: url("../img/coffee_09.jpg") no-repeat fixed;
     text-align: center;
     color: white;
+}
+
+#home-heading a {
+    color: var(--third-color);
 }
 
 .dark-overlay {
