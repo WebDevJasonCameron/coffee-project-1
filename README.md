@@ -15,9 +15,9 @@ The primary portion of this project was done as a team.  Deon Rendell, Lorne Cou
 
 ## Current Outcome:
 Here are a couple of GIFs that show how the project turned out so far...
-
+#### Coffee App Roast Library Management 
 ![](img/CoffeeApp_RoastView.gif)
-
+#### Coffee Life Co. Website
 ![](img/CoffeeApp_WebsiteView.gif)
 
 ---
@@ -38,7 +38,7 @@ Here are a couple of GIFs that show how the project turned out so far...
 
     > Tables are a little old school, you need to refactor the code so that each coffee is displayed in a `div` that contains a heading displaying the coffee name, and the type of roast in a paragraph. Don't display the ids, these are only for our application's internal use
 
--[X] When the page loads, the coffees should be sorted by their Ids in ascending order
+- [X] When the page loads, the coffees should be sorted by their Ids in ascending order
 
 - [X] Add functionality to search through the coffees by name, and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this)
 
