@@ -112,8 +112,6 @@ function addCoffeeToArray (e) {
     coffeeContainer.innerHTML = renderCoffees(coffees);
 }
 
-
-
 // ARRAY OF OBJ
 let coffees = [                                         // From http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
     {id: 1, name: 'Light City', roast: 'light', price: '4.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Hazelnut', flavor2: 'Mocha', flavor3: 'Strawberry'},
