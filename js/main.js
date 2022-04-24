@@ -108,9 +108,24 @@ function addCoffeeToArray (e) {
         roast: addCoffeeRoast.value
     }
     coffees.push(newCoffee)
+    localStorage['coffees'] = JSON.stringify(coffees);                              // Cache Array
+
 
     coffeeContainer.innerHTML = renderCoffees(coffees);
 }
+
+//// LOCAL STORAGE ADD TO CURRENT ARRAY AND DISPLAY //////
+window.onload = function(){
+    if(localStorage.getItem('coffees')){
+        let storedCoffee = JSON.parse(localStorage.getItem('coffees'));
+        console.log(storedCoffee);
+        for (let i = 14; i < storedCoffee.length; i++) {
+            coffees.push(storedCoffee[i]);
+        renderCoffees();
+        }
+    }
+}
+
 
 // ARRAY OF OBJ
 let coffees = [                                         // From http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
