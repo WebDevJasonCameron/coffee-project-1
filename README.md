@@ -7,8 +7,8 @@ The primary portion of this project was done as a team.  Deon Rendell, Lorne Cou
 - [X] Refactor HTML, CSS, and JS 
 
 ## Ideas for Refactor:
+- [X] Create persistent data (Browser Cache)
 - [] Animations 
-- [] Create persistent data (Browser Cache)
 - [] Functional contact form
 
 ---
