@@ -33,15 +33,13 @@ function renderCoffee(coffee) {
 // Runs through the array and calls the renderCoffee function per obj
 function renderCoffees(coffees) {
     let html = '';
-    for (let i = 0; i < coffees.length; i++) {                          //   <-Fixed according to request
-
+    for (let i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
 
-// Filter Roast Function
-function updateCoffees(e) {
+function filterByRoast(e) {
     e.preventDefault();
 
     let selectedRoast = roastSelection.value;
@@ -59,7 +57,6 @@ function updateCoffees(e) {
     }
 }
 
-// Filter Flavor Function
 function filterByFlavor(e) {
     e.preventDefault();
 
@@ -78,7 +75,6 @@ function filterByFlavor(e) {
     }
 }
 
-// Name Search Filter Function
 function filterByName(){
 
     let selectedName = coffeeName.value.toLowerCase();
@@ -93,7 +89,6 @@ function filterByName(){
 
 }
 
-// Add a Coffee to array
 function addCoffeeToArray (e) {
     e.preventDefault();
 
@@ -108,42 +103,46 @@ function addCoffeeToArray (e) {
         roast: addCoffeeRoast.value
     }
     coffees.push(newCoffee)
-    localStorage['coffees'] = JSON.stringify(coffees);                              // Cache Array
-
+    localStorage['coffees'] = JSON.stringify(coffees);                              // Cache New Roast with Array
 
     coffeeContainer.innerHTML = renderCoffees(coffees);
 }
 
-//// LOCAL STORAGE ADD TO CURRENT ARRAY AND DISPLAY //////
+// Select Array location and Load Coffees
 window.onload = function(){
-    if(localStorage.getItem('coffees')){
+    if(localStorage.getItem('coffees') !== null){                           //   If coffees is cached in brow
         let storedCoffee = JSON.parse(localStorage.getItem('coffees'));
-        console.log(storedCoffee);
-        for (let i = 14; i < storedCoffee.length; i++) {
+        for (let i = 0; i < storedCoffee.length; i++) {
             coffees.push(storedCoffee[i]);
-        renderCoffees();
         }
+        coffees = storedCoffee;
+        coffeeContainer.innerHTML = renderCoffees(coffees);                     //   Output coffees array from brow
+    } else {
+        coffees = [
+            {id: 1, name: 'Light City', roast: 'light', price: '4.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Hazelnut', flavor2: 'Mocha', flavor3: 'Strawberry'},
+            {id: 2, name: 'Half City', roast: 'light', price: '6.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Chocolate', flavor2: 'Blueberry', flavor3: 'Mocha'},
+            {id: 3, name: 'Cinnamon', roast: 'light', price: '4.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Cinnamon', flavor2: 'Vanilla', flavor3: 'Mocha'},
+            {id: 4, name: 'City', roast: 'medium', price: '7.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Vanilla', flavor2: 'Blueberry', flavor3: 'Strawberry'},
+            {id: 5, name: 'American', roast: 'medium', price: '2.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Chocolate', flavor2: 'Apple', flavor3: 'Banana'},
+            {id: 6, name: 'Breakfast', roast: 'medium', price: '3.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Bacon', flavor2: 'Maple', flavor3: 'Strawberry'},
+            {id: 7, name: 'High', roast: 'dark', price: '4.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Pumpkin Spice', flavor2: 'Banana', flavor3: 'Strawberry'},
+            {id: 8, name: 'Continental', roast: 'dark', price: '5.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Mocha', flavor2: 'Peppermint', flavor3: 'Caramel'},
+            {id: 9, name: 'New Orleans', roast: 'dark', price: '3.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Hazelnut', flavor2: 'Peppermint', flavor3: 'Mocha'},
+            {id: 10, name: 'European', roast: 'dark', price: '1.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Vanilla', flavor2: 'Raspberry', flavor3: 'Hazelnut'},
+            {id: 11, name: 'Espresso', roast: 'dark', price: '9.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Smoke', flavor2: 'Bitter', flavor3: 'Wood'},
+            {id: 12, name: 'Viennese', roast: 'dark', price: '7.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Sweet', flavor2: 'Caramel', flavor3: 'Hazelnut'},
+            {id: 13, name: 'Italian', roast: 'dark', price: '13.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Strawberry', flavor2: 'Banana', flavor3: 'Strawberry'},
+            {id: 14, name: 'French', roast: 'dark', price: '8.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Chocolate', flavor2: 'Banana', flavor3: 'Caramel'},
+        ];
+        coffeeContainer.innerHTML = renderCoffees(coffees);                     //   First time here
+        localStorage['coffees'] = JSON.stringify(coffees);                      //   Set array in cache
+
     }
 }
 
 
-// ARRAY OF OBJ
-let coffees = [                                         // From http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
-    {id: 1, name: 'Light City', roast: 'light', price: '4.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Hazelnut', flavor2: 'Mocha', flavor3: 'Strawberry'},
-    {id: 2, name: 'Half City', roast: 'light', price: '6.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Chocolate', flavor2: 'Blueberry', flavor3: 'Mocha'},
-    {id: 3, name: 'Cinnamon', roast: 'light', price: '4.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Cinnamon', flavor2: 'Vanilla', flavor3: 'Mocha'},
-    {id: 4, name: 'City', roast: 'medium', price: '7.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Vanilla', flavor2: 'Blueberry', flavor3: 'Strawberry'},
-    {id: 5, name: 'American', roast: 'medium', price: '2.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Chocolate', flavor2: 'Apple', flavor3: 'Banana'},
-    {id: 6, name: 'Breakfast', roast: 'medium', price: '3.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Bacon', flavor2: 'Maple', flavor3: 'Strawberry'},
-    {id: 7, name: 'High', roast: 'dark', price: '4.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Pumpkin Spice', flavor2: 'Banana', flavor3: 'Strawberry'},
-    {id: 8, name: 'Continental', roast: 'dark', price: '5.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Mocha', flavor2: 'Peppermint', flavor3: 'Caramel'},
-    {id: 9, name: 'New Orleans', roast: 'dark', price: '3.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Hazelnut', flavor2: 'Peppermint', flavor3: 'Mocha'},
-    {id: 10, name: 'European', roast: 'dark', price: '1.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Vanilla', flavor2: 'Raspberry', flavor3: 'Hazelnut'},
-    {id: 11, name: 'Espresso', roast: 'dark', price: '9.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Smoke', flavor2: 'Bitter', flavor3: 'Wood'},
-    {id: 12, name: 'Viennese', roast: 'dark', price: '7.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Sweet', flavor2: 'Caramel', flavor3: 'Hazelnut'},
-    {id: 13, name: 'Italian', roast: 'dark', price: '13.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Strawberry', flavor2: 'Banana', flavor3: 'Strawberry'},
-    {id: 14, name: 'French', roast: 'dark', price: '8.99', description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consequuntur dignissimos dolor.', flavor1: 'Chocolate', flavor2: 'Banana', flavor3: 'Caramel'},
-];
+// VAR for ARRAY OF OBJ         // From http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
+let coffees = [];
 
 // VARS
 let coffeeContainer = document.querySelector(                           //   Where we update the coffee data in HTML
@@ -177,9 +176,7 @@ let addSubmit = document.querySelector('#add-submit');          //   Submit Btn 
 let footerByRoast = document.querySelector('.footer-by-roast');
 
 // ACTIONS
-coffeeContainer.innerHTML = renderCoffees(coffees);                     //   THE Start in showing Output
-
-roastSelection.addEventListener('change', updateCoffees)
+roastSelection.addEventListener('change', filterByRoast)
 
 roastFlavor01.addEventListener('change', filterByFlavor)
 
