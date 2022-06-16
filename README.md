@@ -8,8 +8,8 @@ The primary portion of this project was done as a team.  Deon Rendell, Lorne Cou
 
 ## Ideas for Refactor:
 - [X] Create persistent data (Browser Cache)
-- [] Animations 
-- [] Functional contact form
+- [ ] Animations 
+- [ ] Functional contact form
 
 ---
 
